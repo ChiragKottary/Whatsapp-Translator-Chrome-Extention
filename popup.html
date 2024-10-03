@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selected Text</title>
+    <style>
+      .popup-container {
+        border-radius: 15px; 
+        overflow: hidden; 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+        background-color: #f4f4f4; 
+        padding: 20px; 
+      }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        width: 400px; 
+        height: auto; 
+        background-color: transparent; 
+        border-radius: 5px; 
+        box-shadow: 0px 0px 75px 0px rgba(0, 0, 0, 1);
+        border: transparent;
+      }
+
+      h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      select {
+        padding: 10px;
+        border-radius: 5px; 
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        width: 100%;
+        font-size: 16px;
+        background-color: #fff;
+        cursor: pointer;
+        transition: border-color 0.3s;
+      }
+
+      select:focus {
+        border-color: #020202;
+        outline: none;
+      }
+
+      #selected-text,
+      #trans-text {
+        max-height: 100px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #fff;
+        font-size: 25px;
+        margin-bottom: 15px;
+        border-radius: 5px; 
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); 
+      }
+
+      #selected-text {
+        color: #555; 
+      }
+
+      #trans-text {
+        font-weight: bold; 
+        color: #000000; 
+      }
+
+      select:hover {
+        border-color: #007bff; 
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Select the Language</h1>
+    <select name="lang" id="lang">
+      <option value="hi">Hindi</option>
+      <option value="en">English</option>
+      <option value="ml">Malayalam</option>
+      <option value="kn">Kannada</option>
+      <option value="ne">Nepali</option>
+      <option value="ru">Russian</option>
+    </select>
+
+    <div id="selected-text">
+      <p>No text selected yet.</p>
+    </div>
+    <div id="trans-text">
+      <p>No text translated yet.</p>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
